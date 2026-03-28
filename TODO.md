@@ -1,3 +1,0 @@
-- [x] Edit frontend/src/components/Navbar.jsx to add onClick handler to the "BookSwap" span for navigation to "/".
-- [x] Test the navigation by running the app and clicking the logo.
-- [x] Reverted Profile option changes from dashboard sidebar.
