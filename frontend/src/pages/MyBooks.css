@@ -1,0 +1,121 @@
+/* MyBooks.css */
+
+/* Page layout */
+.my-books-page {
+  padding: 30px;
+  background-color: #f4f9ff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.my-books-page h2 {
+  font-size: 28px;
+  color: #1a73e8;
+  margin-bottom: 30px;
+}
+
+.no-books-msg {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Grid layout same as dashboard */
+.my-books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: start;
+}
+
+/* Book card design same as dashboard */
+.my-book-card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  position: relative;
+}
+
+.my-book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Status text at bottom */
+.status-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Status color variations */
+.status-badge.available {
+  color: #2e7d32;
+}
+
+.status-badge.requested {
+  color: #ef6c00;
+}
+
+.status-badge.swapped {
+  color: #c62828;
+}
+
+/* Book cover */
+.book-cover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #e3f2fd;
+  border-radius: 18px 18px 0 0;
+}
+
+/* Info section */
+.book-info {
+  padding: 15px;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.author {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.genre {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .my-books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .my-book-card {
+    height: auto;
+  }
+}

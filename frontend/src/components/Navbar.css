@@ -1,0 +1,114 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #1e3a8a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+}
+
+.sidebar-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: white;
+  color: #1e3a8a;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 50;
+}
+
+.sidebar-menu a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.sidebar-menu a:hover {
+  background: #e0f2fe;
+}
+
+.nav-right {
+  position: relative;
+}
+
+.navbar-user-icon {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  color: #111827;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  padding: 10px 20px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown p {
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.dropdown button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #f97316;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background: #ff7f3f;
+}

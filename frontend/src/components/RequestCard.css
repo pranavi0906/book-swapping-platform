@@ -1,0 +1,275 @@
+/* RequestCard.css */
+
+.request-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 12px;
+  position: relative;
+}
+
+.request-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.request-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.request-card .info {
+  text-align: left;
+}
+
+.request-card h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.request-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 2px 0;
+}
+
+.request-card button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.request-card button:hover {
+  opacity: 0.9;
+}
+
+.request-card button.accept-btn {
+  background-color: #4caf50;
+  color: #fff;
+  margin-right: 6px;
+}
+
+.request-card button.reject-btn {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.request-card button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc !important;
+  color: #666 !important;
+}
+
+.request-card button.accepted {
+  background-color: #4caf50 !important;
+  color: #fff !important;
+}
+
+.request-card button.rejected {
+  background-color: #e53935 !important;
+  color: #fff !important;
+}
+
+.request-card button.feedback-btn {
+  background-color: #ffc107;
+  color: #333;
+  font-weight: bold;
+}
+
+.request-card .user-info {
+  background-color: #e3f2fd;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.request-card .actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.due-date-section {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.set-due-date-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.date-picker {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.date-picker input[type="date"] {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.confirm-date-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.due-date {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 20px;
+}
+
+.modal-content p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #333;
+}
+
+.modal-form input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.modal-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-actions .accept-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.modal-actions .accept-btn:hover {
+  background-color: #45a049;
+}
+
+.modal-actions .cancel-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.modal-actions .cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+  .request-card img {
+    height: 150px;
+  }
+
+  .request-card h4 {
+    font-size: 16px;
+  }
+
+  .request-card p {
+    font-size: 13px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal-form {
+    gap: 12px;
+  }
+}
